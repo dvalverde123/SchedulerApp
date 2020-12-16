@@ -14,11 +14,11 @@ slots = ["Monday 9-10AM", "Monday 9-10 AM", "Monday 10-11AM", "Monday 11AM-12PM"
 "Week 4 Friday 9-10AM", "Week 4 Friday 10-11AM", "Week 4 Friday 11AM-12PM", "Week 4 Friday 12PM-1PM", "Week 4 Friday 1PM-2PM", "Friday 2PM-3PM", "Week 4 Friday 3PM-4PM", "Week 4 Friday 4PM-5PM", "Week 4 Friday 5PM-6PM", "Friday 6PM-7PM", "Week 4 Friday 7PM-8PM", "Week 4 Friday 8PM-9PM", "Week 4 Friday 9PM-10PM",
 "Week 4 Saturday 9-10AM", "Week 4 Saturday 10-11AM", "Week 4 Saturday 11AM-12PM", "Week 4 Saturday 12PM-1PM", "Week 4 Saturday 1PM-2PM", "Week 4 Saturday 2PM-3PM", "Week 4 Saturday 3PM-4PM", "Week 4 Saturday 4PM-5PM", "Week 4 Saturday 5PM-6PM", "Week 4 Saturday 6PM-7PM", "Week 4 Saturday 7PM-8PM", "Week 4 Saturday 8PM-9PM", "Week 4 Saturday 9PM-10PM", "Week 4 Sunday 9-10AM", "Week 4 Sunday 10-11AM", "Week 4 Sunday 11AM-12PM", "Week 4 Sunday 12PM-1PM", "Week 4 Sunday 1PM-2PM", "Week 4 Sunday 2PM-3PM", "Week 4 Sunday 3PM-4PM", "Week 4 Sunday 4PM-5PM", "Week 4 Sunday 5PM-6PM", "Week 4 Sunday 6PM-7PM", "Week 4 Sunday 7PM-8PM", "Week 4 Sunday 8PM-9PM", "Week 4 Sunday 9PM-10PM"]
 matches = list()
-with open("Week34final.csv", 'w', newline='', encoding = "utf-8") as schedule:
+with open("your_first_file.csv", 'w', newline='', encoding = "utf-8") as x:
 	for slot in slots:
-		with open("Week34content.csv", 'r', encoding = "utf-8") as mems:
-			reader = csv.reader(mems, delimiter=",")
-			writer = csv.writer(schedule, delimiter =',')
+		with open("your_second_file", 'r', encoding = "utf-8") as y:
+			reader = csv.reader(x, delimiter=",")
+			writer = csv.writer(y, delimiter =',')
 			for row in reader:
 				if slot in row:
 					print(slot, row[0:2])
